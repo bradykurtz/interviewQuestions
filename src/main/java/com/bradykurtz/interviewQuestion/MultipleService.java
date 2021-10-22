@@ -1,4 +1,4 @@
-package edu.weber.interviewQuestion;
+package com.bradykurtz.interviewQuestion;
 
 public class MultipleService {
 

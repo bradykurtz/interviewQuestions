@@ -1,4 +1,4 @@
-package edu.weber.interviewQuestion;
+package com.bradykurtz.interviewQuestion;
 
 import java.time.Duration;
 import java.time.Instant;
