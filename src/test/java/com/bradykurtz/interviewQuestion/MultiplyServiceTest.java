@@ -9,6 +9,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @ExtendWith(MockitoExtension.class)
 public class MultiplyServiceTest {
@@ -73,6 +74,31 @@ public class MultiplyServiceTest {
         assertEquals(secondParam, firstParam, 0);
     }
 
+    @Test
+    public void test_d1_null() {
+        assertNull(multipleService.setIndexAndNumSum(null, 10));
+    }
 
+    @Test
+    public void test_d2_null() {
+        assertNull(multipleService.setIndexAndNumSum(10, null));
+    }
 
+    @Test
+    public void test_d1_greater_than_d2() {
+        int[] result = multipleService.setIndexAndNumSum(10000000, 5);
+        assertEquals(5, result[0]);
+    }
+
+    @Test
+    public void test_d2_greater_than_d1() {
+        int[] result = multipleService.setIndexAndNumSum(5, 10000000);
+        assertEquals(5, result[0]);
+    }
+
+    @Test
+    public void test_d2_equal_d1() {
+        int[] result = multipleService.setIndexAndNumSum(0, 0);
+        assert(result[0] == result[1]);
+    }
 }

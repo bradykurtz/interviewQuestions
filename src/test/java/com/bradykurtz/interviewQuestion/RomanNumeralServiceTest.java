@@ -36,4 +36,9 @@ public class RomanNumeralServiceTest {
     public void returns_91() {
         assertEquals(91, romanNumeralService.convert("XCI"));
     }
-}
+
+    @Test
+    public void returns_229() {
+        assertEquals(213, romanNumeralService.convert("CCXIII"));
+    }
+ }
