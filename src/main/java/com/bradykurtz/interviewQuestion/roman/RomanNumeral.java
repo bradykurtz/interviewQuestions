@@ -26,6 +26,10 @@ public enum RomanNumeral {
         return romanNumeral;
     }
 
+    public static RomanNumeral getRomanNumeral(char value) {
+        return getRomanNumeral(String.valueOf(value));
+    }
+
     public Integer getValue() {
         return value;
     }
