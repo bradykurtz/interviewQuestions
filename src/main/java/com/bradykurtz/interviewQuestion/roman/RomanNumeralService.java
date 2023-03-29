@@ -3,7 +3,7 @@ package com.bradykurtz.interviewQuestion.roman;
 public class RomanNumeralService {
 
     /*
-        Adding Romain Numerals Rule
+        Adding Roman Numerals Rule
         if current number is less than the next number you subtract
         else if number is equal or greater you add
         Example: IV = 4
